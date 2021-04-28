@@ -87,17 +87,6 @@ date_win_max += taxis_increment;
 g.updateOptions( { dateWindow : [date_win_min, date_win_max] } );
 
 };
-  
-  var avgsum = 0;
-  for (int i = 1; i < 10; i++) {
-    avgvolt[i] = avgvolt[i+1];
-  }
-  avgvolt[10] = y;
-  for (int i = 1; i <= 10; i++) {
-    avgsum += avgvolt[i];
-  }
-  
-  var y = avgsum/10;
 
 data.push([x, y]);
 
