@@ -88,16 +88,6 @@ g.updateOptions( { dateWindow : [date_win_min, date_win_max] } );
 
 };
 
-  var avgsum = 0;
-  for (int i = 1; i < 50; i++) {
-    avgvolt[i] = avgvolt[i+1];
-  }
-  avgvolt[50] = y;
-  for (int i = 1; i <= 50; i++) {
-    avgsum += avgvolt[i];
-  }
-  
-  var y = avgsum/50;
 data.push([x, y]);
 
 g.updateOptions( { 'file': data } );
